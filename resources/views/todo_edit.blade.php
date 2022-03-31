@@ -8,14 +8,16 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     </head>
 
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">    
-        <a href="todo_show">Back</a> <br/><br/>  
+        <a href="todo_show"><div class="btn btn-danger">Back</div></a> <br/><br/>  
        <form action="{{route('todo.update', [$todoArr->id])}}" method="post">
            @csrf
-           <table>
+           <table class="table table-borderless">
                <tr>
                    <td>
                        First Name
@@ -34,7 +36,7 @@
                </tr>
                <tr>
                    <td>
-                       <input type="submit" name="submit" />
+                       <input style="border-radius:15px; background-color:teal" type="submit" name="submit" />
                    </td>
                </tr>
            </table>
